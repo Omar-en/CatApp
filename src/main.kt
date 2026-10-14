@@ -15,8 +15,9 @@ fun main() {
     val hira = Cat("Hira", 3, 19)
     hira.walk(5)
     println(hira)
-    val micha = Cat("micha", 3, 20)
-    micha.eat()
-    micha.eat()
+    val micha = Cat("micha", 3, 10)
+    micha.eat(5)
+//    micha.eat(5)
     println(micha)
+    println(if (micha.eat(5)) "eating succesful " else "eating failed" )
 }
