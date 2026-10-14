@@ -1,11 +1,22 @@
 class Cat (val name: String, var age: Int, var weight: Int) {
 
-    fun walk() {
-        weight--
+    public fun walk(weightLoss: Int): Boolean {
+        if (weightLoss <= 0) {
+            return false
+        }
+        weight -= weightLoss
+        return true
     }
-    fun eat(){
-        weight++
-    }
+
+    public fun eat() : Boolean {
+       if (weight < 20) {
+           weight++
+           return true
+       }
+        return false
+   }
+
+
     override fun toString() : String {
         return "Name: $name Age: $age Weight: $weight"
     }
